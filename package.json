@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "echo \\ Error no test spicified\\ && exit 1"
+    "test": "echo \\ Error no test spicified\\ && exit 1",
+    "build:ui": "rm -rf dist && cd /c/Users/ivang/Documents/ejerciciosFullStack/Ejercicios\\ Part2 && npm run build --prod && cp -r dist /c/Users/ivang/Documents/ejerciciosFullStack/part3",
+    "deploy": "git push origin main",
+    "deploy:full": "npm run build:ui && git add . && git commit -m 'Actualización de UI' && npm run deploy",
+    "logs:prod": "render logs --tail"
   },
   "author": "Ivan Guerrero",
   "license": "MIT",
