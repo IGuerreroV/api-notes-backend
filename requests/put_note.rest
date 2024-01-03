@@ -1,7 +1,7 @@
-PUT http://localhost:3001/api/notes/3
+PUT http://localhost:3001/api/notes/658e301c53b3497d251a8bac
 Content-Type: application/json
 
 {
-    "content": "no side effects!",
+    "content": "Probando el Put",
     "important": true
 }
