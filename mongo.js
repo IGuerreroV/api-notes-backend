@@ -9,16 +9,15 @@ const connectionString = process.env.MONGODB_URI
 
 // Conexion mongodb
 mongoose.connect(connectionString)
-    .then(() => {
-        console.log('Database connected')
-    }).catch(err => {
-        console.error(err);
-    })
+  .then(() => {
+    console.log('Database connected')
+  }).catch(err => {
+    console.error(err)
+  })
 
 process.on('uncaughtException', () => {
-    mongoose.connection.disconnect()
+  mongoose.connection.disconnect()
 })
-
 
 // const note = new Note({
 //     content: 'Callback-functions suck',

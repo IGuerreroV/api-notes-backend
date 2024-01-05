@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "lint": "eslint .",
     "test": "echo \\ Error no test spicified\\ && exit 1",
     "build:ui": "rm -rf dist && cd /c/Users/ivang/Documents/ejerciciosFullStack/Ejercicios\\ Part2 && npm run build --prod && cp -r dist /c/Users/ivang/Documents/ejerciciosFullStack/part3",
     "deploy": "git push origin main",
@@ -22,6 +23,10 @@
     "mongoose": "^8.0.3"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "standard": "17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   }
 }
